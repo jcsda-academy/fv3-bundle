@@ -39,15 +39,6 @@ ecbuild_bundle_initialize()
 # jedi-cmake
 ecbuild_bundle( PROJECT jedicmake GIT "https://github.com/jcsda/jedi-cmake.git" BRANCH develop UPDATE )
 
-# ECMWF libraries
-option("BUNDLE_SKIP_ECKIT" "Don't build eckit" "ON" ) # Skip eckit build unless user passes -DBUNDLE_SKIP_ECKIT=OFF
-option("BUNDLE_SKIP_FCKIT" "Don't build fckit" "ON") # Skip fckit build unless user passes -DBUNDLE_SKIP_FCKIT=OFF
-option("BUNDLE_SKIP_ATLAS" "Don't build atlas" "ON") # Skip atlas build unless user passes -DBUNDLE_SKIP_ATLAS=OFF
-
-ecbuild_bundle( PROJECT eckit GIT "https://github.com/ecmwf/eckit.git" TAG 1.16.0 )
-ecbuild_bundle( PROJECT fckit GIT "https://github.com/ecmwf/fckit.git" TAG 0.9.2 )
-ecbuild_bundle( PROJECT atlas GIT "https://github.com/ecmwf/atlas.git" TAG 0.24.1 )
-
 # External (required) observation operators
 ecbuild_bundle( PROJECT crtm GIT "https://github.com/jcsda/crtm.git"   TAG v2.3-jedi.0 )
 
@@ -55,7 +46,7 @@ ecbuild_bundle( PROJECT crtm GIT "https://github.com/jcsda/crtm.git"   TAG v2.3-
 ecbuild_bundle( PROJECT oops  GIT "https://github.com/jcsda/oops.git"  BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT saber GIT "https://github.com/jcsda/saber.git" BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT ioda  GIT "https://github.com/jcsda/ioda.git"  BRANCH develop UPDATE )
-ecbuild_bundle( PROJECT ufo   GIT "https://github.com/jcsda/ufo.git"   BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT ufo   GIT "https://github.com/jedi-da-academy/ufo.git"   BRANCH develop UPDATE )
 
 # FMS and FV3 dynamical core
 ecbuild_bundle( PROJECT fms GIT "https://github.com/jcsda-internal/FMS.git" BRANCH release-stable UPDATE )
@@ -64,7 +55,7 @@ ecbuild_bundle( PROJECT fv3 GIT "https://github.com/jcsda-internal/GFDL_atmos_cu
 # fv3-jedi and associated repositories
 ecbuild_bundle( PROJECT femps       GIT "https://github.com/jcsda/femps.git"                BRANCH develop UPDATE )
 ecbuild_bundle( PROJECT fv3-jedi-lm GIT "https://github.com/jcsda/fv3-jedi-linearmodel.git" BRANCH develop UPDATE )
-ecbuild_bundle( PROJECT fv3-jedi    GIT "https://github.com/jcsda/fv3-jedi.git"             BRANCH develop UPDATE )
+ecbuild_bundle( PROJECT fv3-jedi    GIT "https://github.com/jedi-da-academy/fv3-jedi.git"   BRANCH develop UPDATE )
 
 # ioda, ufo, and fv3-jedi test data
 #---------------------------------
